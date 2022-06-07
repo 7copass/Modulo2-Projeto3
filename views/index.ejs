@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>NFT Market</title>
+  </head>
+  <body>
+    <nav>
+      <ul>
+        <li id="logo"><a href="/"><img src="/img/logo-bored-ape.png" alt="" /></a></li>
+        <a href="#title-form"></a><li>Discover</li></a>
+        <a href="#cards"></a><li>Market</li></a>
+        <a href="#cards"></a><li>Community</li></a>
+        <a href="#cards"></a><li>Features</li></a>
+      </ul>
+
+      <div class="btn-nav">
+        <button>Create</button>
+        <button>Login</button>
+      </div>
+    </nav>
+    <main>
+      <div id="title">
+        <h1>
+          Discover, Collect, and <br />
+          sell extraordinary NFTS
+        </h1>
+      </div>
+      <div id="legend-title">
+        <p>
+          We're bringing digital creators crypto natives, and collector together
+          to <br />
+          move culture forward also competition to become winner in auction
+        </p>
+      </div>
+      <div id="btn-center">
+       <a href="https://opensea.io/collection/boredapeyachtclub"><button>Explore Now</button></a>
+       <a href="#cards"><button>Sell NFT</button></a>
+      </div>
+
+      <section id="cards">
+        <h2>Bored Ape Yatch Club</h2>
+
+        <% blockchain.forEach((nft) => { %>
+
+        <div class="card">
+          <div id="icons">
+          <a href="/delete/<%=nft.id%>"><img src="/img/trash.png" alt=""></a>
+          <a href="/details/<%= nft.id%>"><img src="/img/refresh.png" alt=""></a>
+        </div>
+          <div id="title-nft">
+            
+          </div>
+         <a href="/sobre/<%=nft.id%>"><img src="<%=nft.imagem %>" alt="" /></a>
+          <div id="preco">
+            <p id="nome-colecao">
+              Bored Ape Yatch Club
+              <img id="verificado" src="/img/verificado.png" alt="" />
+            </p>
+
+            <p id="lance">
+              Top Bid<br />
+              <img id="ethereum" src="/img/ethereum.png" alt="" /><b
+                ><%=nft.valor%></b
+              >
+              ETH
+            </p>
+          </div>
+        </div>
+
+        <% }) %>
+      </section>
+
+      <div id="title-form">
+        <% if (nft == undefined) {%>
+
+        <h2>Register a new NFT</h2>
+      </div>
+
+      <div id="form-container">
+        <form action="/create" method="post">
+          <label for="">Name:</label>
+          <input type="text" name="nome" id="nome" required />
+
+          <label for="">Value:</label>
+          <input type="text" name="valor" id="valor" required />
+
+          <label for="">Description:</label>
+          <input type="text" name="descricao" id="descricao" required />
+
+          <label for="">Image link:</label>
+          <input type="text" name="link" id="link" required />
+
+          <div class="submit">
+            <button class="btn-submit" type="submit">Submit</button>
+          </div>
+        </form>
+
+        <% }else{ %>
+
+        <div id="title-form">
+          <h2>Update a NFT</h2>
+        </div>
+
+        <div id="form-container">
+          <form action="/update/<%= nft.id%>" method="post">
+            <label for="">Name:</label>
+            <input
+              type="text"
+              name="nome"
+              id="nome"
+              value="<%=nft.nome%>"
+              required
+            />
+
+            <label for="">Value:</label>
+            <input
+              type="text"
+              name="valor"
+              id="valor"
+              value="<%= nft.valor%>"
+              required
+            />
+
+            <label for="">Description:</label>
+            <input
+              type="text"
+              name="descricao"
+              id="descricao"
+              value="<%=nft.descricao%>"
+              required
+            />
+
+            <label for="">Image link:</label>
+            <input
+              type="text"
+              name="link"
+              id="link"
+              value="<%= nft.imagem%>"
+              required
+            />
+            <div class="submit">
+              <button class="btn-submit" type="submit">Submit</button>
+            </div>
+          </form>
+
+          <% } %>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>

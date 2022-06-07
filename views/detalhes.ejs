@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/detalhes.css">
+    <title>Sobre</title>
+</head>
+<body>
+  <nav>
+        <ul>
+          <li id="logo"><img src="/img/logo-bored-ape.png" alt="" /></li>
+          
+        </ul>       
+      </nav> 
+
+    <main>
+
+
+        <div id="title-nft">
+            <h1><%=blockchain[id].nome%> </h1>
+        </div>   
+<section id="cards">
+          
+
+        <div class="card">    
+            
+           
+           <img src="<%=blockchain[id].imagem%>" alt="" />
+
+            <div id="preco">
+              <p id="nome-colecao">
+                Bored Ape Yatch Club
+                <img id="verificado" src="/img/verificado.png" alt="" />
+              </p>
+  
+              <p id="lance">
+                Top Bid<br />
+                <img id="ethereum" src="/img/ethereum.png" alt="" /><b
+                  ><%=blockchain[id].valor%></b
+                >
+                ETH
+              </p>
+            </div>
+          </div>
+
+        </div>
+    </section>
+
+      </main>
+</body>
+</html>
