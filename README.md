@@ -44,7 +44,8 @@ Tela 3
   
 tela 4
   
- ![detalhes](https://user-images.githubusercontent.com/98196448/172507296-36f9787f-1662-4383-979d-db0a394855fa.png)
+ ![details](https://user-images.githubusercontent.com/98196448/172508188-4f1de184-097b-470e-9130-3aff3aab3968.png)
+
 
 
   
