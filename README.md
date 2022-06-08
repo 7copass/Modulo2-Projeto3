@@ -27,7 +27,8 @@
 
 Tela 1
   
-![pg-principal](https://user-images.githubusercontent.com/98196448/172507186-8b50d093-f817-4b47-bf50-a0cafe24b223.png)
+
+![pg-principal](https://user-images.githubusercontent.com/98196448/172507597-620a1fa4-0185-4f9f-8787-b10a5d78f14f.png)
 
 
 Tela 2
