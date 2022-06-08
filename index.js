@@ -3,6 +3,8 @@ const { networkInterfaces } = require("os");
 const app = express();
 const path = require('path');
 
+const port = process.env.PORT || 3000;
+
 
 app.use(express.static(path.join(__dirname, "public")));
 app.use(express.urlencoded());
@@ -103,4 +105,6 @@ app.get('/sobre/:id', (req, res) =>{
 });
 
 
-app.listen(3000, () => console.log('Servidor rodando em http://localhost:3000'));
+app.listen(port, () =>
+  console.log(`Servidor rodando em: http://localhost:${port}`),
+);
